@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login</title>
+  <style>
+    body{font-family:Segoe UI,Arial,Helvetica,sans-serif;background:#f4f7fb;padding:32px}
+    .card{max-width:420px;margin:0 auto;background:#fff;border-radius:8px;padding:24px;box-shadow:0 6px 18px rgba(20,30,50,0.08)}
+    h1{margin:0 0 12px;font-size:20px}
+    label{display:block;margin:12px 0 6px;font-weight:600}
+    input[type="text"],input[type="email"],input[type="tel"],input[type="password"]{width:100%;padding:10px;border:1px solid #d8e0ea;border-radius:6px}
+    .actions{margin-top:18px;display:flex;align-items:center;justify-content:space-between}
+    .btn{background:#1366d6;color:#fff;padding:10px 16px;border:none;border-radius:6px;cursor:pointer}
+    .hint{font-size:13px;color:#6b7280}
+    .error{color:#b91c1c;font-size:13px}
+    .row{display:flex;align-items:center;gap:8px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Sign in</h1>
+    <form id="loginForm" onsubmit="return validateLogin();" novalidate>
+      <label for="identifier">Email or Mobile</label>
+      <input id="identifier" name="identifier" type="text" placeholder="you@example.com or 1234567890" required />
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" minlength="8" placeholder="Your password" required />
+
+      <div class="row" style="margin-top:10px">
+        <label style="display:flex;align-items:center;gap:8px"><input id="remember" name="remember" type="checkbox" /> Remember me</label>
+        <a href="#" style="color:#1366d6;text-decoration:none;font-size:13px">Forgot?</a>
+      </div>
+
+      <div id="msg" class="error" role="status" aria-live="polite"></div>
+
+      <div class="actions">
+        <div class="hint">Don't have an account? <a href="Register.html" style="color:#1366d6;text-decoration:none">Register</a></div>
+        <button class="btn" type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function validateLogin(){
+      const form = document.getElementById('loginForm');
+      const id = form.identifier.value.trim();
+      const password = form.password.value;
+      const msg = document.getElementById('msg');
+      msg.textContent = '';
+
+      if(!id){ msg.textContent = 'Please enter your email or mobile number.'; return false; }
+      const isEmail = /^\S+@\S+\.\S+$/.test(id);
+      const isMobile = /^[0-9]{10}$/.test(id);
+      if(!isEmail && !isMobile){ msg.textContent = 'Enter a valid email or 10-digit mobile number.'; return false; }
+      if(password.length < 8){ msg.textContent = 'Password must be at least 8 characters.'; return false; }
+
+      // Demo submit — replace with real authentication call
+      alert('Login successful (demo).');
+      form.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
