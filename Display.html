@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products</title>
+  <style>
+    :root { --accent: #1366d6; --muted: #6b7280; }
+    body { margin: 0; font-family: Segoe UI, Arial, Helvetica, sans-serif; background: #f4f7fb; color: #0f1724; }
+    header { background: #fff; border-bottom: 1px solid #e6eef8; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { font-size: 1.2rem; font-weight: 700; color: var(--accent); }
+    .nav-links a { color: var(--accent); text-decoration: none; margin-left: 16px; }
+    .hero { background: linear-gradient(90deg, #ffffff 0%, #eef6ff 100%); border-radius: 12px; padding: 30px; margin: 20px 0; }
+    .hero h1 { margin: 0 0 14px; font-size: 2rem; }
+    .hero p { margin: 0; color: var(--muted); line-height: 1.7; }
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 24px; }
+    .card { background: #fff; border: 1px solid #e5efff; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 25px rgba(15,23,44,0.06); }
+    .card img { width: 100%; display: block; }
+    .card-body { padding: 18px; }
+    .card-body h3 { margin: 0 0 10px; font-size: 1.1rem; }
+    .card-body p { margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
+    .price { font-weight: 700; color: #0b6ad8; }
+    .sale { display: inline-block; margin-top: 10px; padding: 6px 10px; border-radius: 999px; background: #ffedd5; color: #b45309; font-size: 0.85rem; }
+    .button { display: inline-flex; align-items: center; justify-content: center; background: var(--accent); color: #fff; padding: 10px 16px; border-radius: 10px; text-decoration: none; margin-top: 14px; }
+    footer { margin-top: 36px; padding: 20px 0; color: var(--muted); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">SunnyShop</div>
+        <div class="nav-links">
+          <a href="Homepage.html">Home</a>
+          <a href="Login.html">Login</a>
+          <a href="Register.html">Register</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Shop our top categories</h1>
+      <p>Discover fresh finds and summer deals across mobiles, dresses, laptops, and shoes. Browse our featured products below and enjoy quick shopping.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x240?text=Mobiles" alt="Mobiles" />
+        <div class="card-body">
+          <h3>5G Smartphone</h3>
+          <p>Premium performance, long battery life, and vivid display for everyday use.</p>
+          <div class="price">$399.99</div>
+          <div class="sale">25% off</div>
+          <a class="button" href="#">View mobile</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x240?text=Dresses" alt="Dresses" />
+        <div class="card-body">
+          <h3>Summer Dress</h3>
+          <p>Lightweight, stylish, and perfect for warm weather outings and special evenings.</p>
+          <div class="price">$39.99</div>
+          <div class="sale">30% off</div>
+          <a class="button" href="#">View dress</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x240?text=Laptops" alt="Laptops" />
+        <div class="card-body">
+          <h3>Thin Laptop</h3>
+          <p>Lightweight build, fast processor, and long battery life for work or study.</p>
+          <div class="price">$799.99</div>
+          <div class="sale">15% off</div>
+          <a class="button" href="#">View laptop</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x240?text=Shoes" alt="Shoes" />
+        <div class="card-body">
+          <h3>Running Shoes</h3>
+          <p>Comfortable cushioning, durable soles, and a clean look for everyday wear.</p>
+          <div class="price">$29.99</div>
+          <div class="sale">40% off</div>
+          <a class="button" href="#">View shoes</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x240?text=RTC+Watch" alt="RTC Watch" />
+        <div class="card-body">
+          <h3>RTC Smart Watch</h3>
+          <p>Track time, workouts, and notifications with a sleek and smart wearable.</p>
+          <div class="price">$59.99</div>
+          <div class="sale">20% off</div>
+          <a class="button" href="#">View watch</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2026 SunnyShop • Find the latest products in shoes, mobiles, dresses, laptops, and smart wearables.</div>
+    </footer>
+  </main>
+</body>
+</html>
